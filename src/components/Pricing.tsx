@@ -4,7 +4,7 @@ const PLANS = [
     target: "스타트업 · 검증 목적",
     price: "990,000",
     period: "/월",
-    color: "border-white/10",
+    color: "border-slate-200",
     features: [
       "표준 1개 편입",
       "사용자 5명",
@@ -13,7 +13,7 @@ const PLANS = [
       "이메일 지원",
     ],
     cta: "시작하기",
-    ctaStyle: "bg-white/10 hover:bg-white/15 text-white",
+    ctaStyle: "bg-slate-100 hover:bg-slate-200 text-slate-900",
     popular: false,
   },
   {
@@ -40,7 +40,7 @@ const PLANS = [
     target: "중견기업 · 복수 표준",
     price: "7,990,000",
     period: "/월",
-    color: "border-white/10",
+    color: "border-slate-200",
     features: [
       "표준 10개 편입",
       "사용자 50명",
@@ -52,7 +52,7 @@ const PLANS = [
       "전담 CS 지원",
     ],
     cta: "시작하기",
-    ctaStyle: "bg-white/10 hover:bg-white/15 text-white",
+    ctaStyle: "bg-slate-100 hover:bg-slate-200 text-slate-900",
     popular: false,
   },
   {
@@ -60,7 +60,7 @@ const PLANS = [
     target: "대기업 · 커스텀 요구사항",
     price: "협의",
     period: "",
-    color: "border-white/10",
+    color: "border-slate-200",
     features: [
       "표준 무제한",
       "사용자 무제한",
@@ -72,7 +72,7 @@ const PLANS = [
       "POC 무료 지원",
     ],
     cta: "영업팀 문의",
-    ctaStyle: "bg-white/10 hover:bg-white/15 text-white",
+    ctaStyle: "bg-slate-100 hover:bg-slate-200 text-slate-900",
     popular: false,
   },
 ];
@@ -86,17 +86,17 @@ const ADD_ONS = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-[#080c16]">
+    <section id="pricing" className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full px-4 py-1.5 mb-4 text-sm text-indigo-400">
+          <div className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-200 rounded-full px-4 py-1.5 mb-4 text-sm text-indigo-700">
             요금제
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             조직 규모에 맞는{" "}
             <span className="gradient-text">합리적인 요금제</span>
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             외부 컨설팅 비용의 20~40%로 동일한 결과, 연간 60~80% 비용 절감.
             초기 3개사는 베타 특별가로 온보딩합니다.
           </p>
@@ -107,10 +107,10 @@ export default function Pricing() {
           {PLANS.map((plan) => (
             <div
               key={plan.name}
-              className={`relative rounded-2xl p-6 flex flex-col card-glow ${
+              className={`relative rounded-2xl p-6 flex flex-col card-glow shadow-sm ${
                 plan.popular
                   ? "pricing-popular"
-                  : `bg-white/3 border ${plan.color}`
+                  : `bg-white border ${plan.color}`
               }`}
             >
               {plan.popular && (
@@ -120,16 +120,16 @@ export default function Pricing() {
               )}
 
               <div className="mb-5">
-                <h3 className="text-white font-bold text-xl mb-1">{plan.name}</h3>
+                <h3 className="text-slate-900 font-bold text-xl mb-1">{plan.name}</h3>
                 <p className="text-slate-500 text-sm">{plan.target}</p>
               </div>
 
               <div className="mb-6">
-                <span className="text-4xl font-bold text-white">
+                <span className="text-4xl font-bold text-slate-900">
                   {plan.price === "협의" ? "" : "₩"}
                   {plan.price}
                 </span>
-                <span className="text-slate-400 text-sm ml-1">{plan.period}</span>
+                <span className="text-slate-600 text-sm ml-1">{plan.period}</span>
                 {plan.price !== "협의" && (
                   <div className="text-xs text-slate-500 mt-1">VAT 별도</div>
                 )}
@@ -137,8 +137,8 @@ export default function Pricing() {
 
               <ul className="space-y-2 flex-1 mb-6">
                 {plan.features.map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-sm text-slate-300">
-                    <span className="text-indigo-400 text-xs shrink-0">✓</span>
+                  <li key={f} className="flex items-center gap-2 text-sm text-slate-700">
+                    <span className="text-indigo-600 text-xs shrink-0">✓</span>
                     {f}
                   </li>
                 ))}
@@ -155,20 +155,20 @@ export default function Pricing() {
         </div>
 
         {/* Revenue projection */}
-        <div className="bg-white/3 border border-white/8 rounded-2xl p-8 mb-8">
-          <h3 className="text-white font-bold text-xl mb-6">수익 성장 시나리오</h3>
+        <div className="bg-white border border-slate-200 rounded-2xl p-8 mb-8 shadow-sm">
+          <h3 className="text-slate-900 font-bold text-xl mb-6">수익 성장 시나리오</h3>
           <div className="grid grid-cols-3 gap-6">
             {[
               { year: "Year 1 (2026)", clients: "10개사", mrr: "300만 원", arr: "3.6억 원", note: "V-Way 기존 고객 전환" },
               { year: "Year 2 (2027)", clients: "50개사", mrr: "400만 원", arr: "24억 원", note: "인바운드 + 파트너 채널" },
               { year: "Year 3 (2028)", clients: "150개사", mrr: "500만 원", arr: "90억 원", note: "글로벌 진출 포함" },
             ].map((row, i) => (
-              <div key={row.year} className={`text-center ${i < 2 ? "border-r border-white/8 pr-6" : ""}`}>
+              <div key={row.year} className={`text-center ${i < 2 ? "border-r border-slate-200 pr-6" : ""}`}>
                 <div className="text-sm text-slate-500 mb-2">{row.year}</div>
                 <div className="text-3xl font-bold gradient-text mb-1">{row.arr}</div>
-                <div className="text-sm text-slate-400 mb-1">ARR 목표</div>
+                <div className="text-sm text-slate-600 mb-1">ARR 목표</div>
                 <div className="text-xs text-slate-500">{row.clients} · 평균 MRR {row.mrr}</div>
-                <div className="text-xs text-slate-600 mt-1">{row.note}</div>
+                <div className="text-xs text-slate-400 mt-1">{row.note}</div>
               </div>
             ))}
           </div>
@@ -176,15 +176,15 @@ export default function Pricing() {
 
         {/* Add-ons */}
         <div>
-          <h3 className="text-white font-bold text-lg mb-4">추가 수익 모듈</h3>
+          <h3 className="text-slate-900 font-bold text-lg mb-4">추가 수익 모듈</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {ADD_ONS.map((addon) => (
               <div
                 key={addon.title}
-                className="bg-white/3 border border-white/8 rounded-xl p-4 card-glow"
+                className="bg-white border border-slate-200 rounded-xl p-4 card-glow shadow-sm"
               >
                 <span className="text-xl mb-2 block">{addon.icon}</span>
-                <div className="text-white text-sm font-medium mb-1">{addon.title}</div>
+                <div className="text-slate-900 text-sm font-medium mb-1">{addon.title}</div>
                 <div className="text-slate-500 text-xs">{addon.desc}</div>
               </div>
             ))}

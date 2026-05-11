@@ -51,18 +51,18 @@ const FEATURES = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-24 bg-[#0a0e1a]">
+    <section id="features" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full px-4 py-1.5 mb-4 text-sm text-indigo-400">
+          <div className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-200 rounded-full px-4 py-1.5 mb-4 text-sm text-indigo-700">
             핵심 기능
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             컨설팅이 아닌,{" "}
             <span className="gradient-text">자동화된 플랫폼</span>
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             AI 에이전트가 24/7 표준 문서를 작성하고, 이행 여부를 심사하며, 개선안을 제안합니다.
             사람은 최종 판단만 내리면 됩니다.
           </p>
@@ -73,42 +73,42 @@ export default function Features() {
           {FEATURES.map((f) => (
             <div
               key={f.title}
-              className="bg-white/3 border border-white/8 rounded-2xl p-6 card-glow group"
+              className="bg-white border border-slate-200 rounded-2xl p-6 card-glow group shadow-sm"
             >
               <div className="text-3xl mb-4">{f.icon}</div>
               <div className="flex items-start justify-between gap-2 mb-2">
-                <h3 className="text-white font-semibold text-base leading-tight">{f.title}</h3>
+                <h3 className="text-slate-900 font-semibold text-base leading-tight">{f.title}</h3>
               </div>
-              <span className="inline-block text-xs bg-indigo-500/15 text-indigo-400 border border-indigo-500/20 rounded-full px-2 py-0.5 mb-3">
+              <span className="inline-block text-xs bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-full px-2 py-0.5 mb-3">
                 {f.badge}
               </span>
-              <p className="text-slate-400 text-sm leading-relaxed">{f.desc}</p>
+              <p className="text-slate-600 text-sm leading-relaxed">{f.desc}</p>
             </div>
           ))}
         </div>
 
         {/* PoC result banner */}
-        <div className="mt-12 bg-gradient-to-r from-indigo-500/10 via-violet-500/10 to-cyan-500/10 border border-indigo-500/20 rounded-2xl p-8">
+        <div className="mt-12 bg-gradient-to-r from-indigo-50 via-violet-50 to-cyan-50 border border-indigo-200 rounded-2xl p-8">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="text-4xl">✅</div>
             <div className="flex-1">
-              <div className="text-sm text-indigo-400 font-medium mb-1">PoC 검증 결과</div>
-              <h3 className="text-xl text-white font-bold mb-2">
+              <div className="text-sm text-indigo-700 font-medium mb-1">PoC 검증 결과</div>
+              <h3 className="text-xl text-slate-900 font-bold mb-2">
                 단일 PDCA 루프에서 Critical NCR 3건 + Data Gap 2건 해소 실증
               </h3>
-              <p className="text-slate-400 text-sm">
+              <p className="text-slate-600 text-sm">
                 NCR-001 Critical 발행 → 차원 4 사이클 → PRO v1.0→v1.1 자동 개정 →{" "}
-                <strong className="text-slate-300">KPI Critical 4 → 1 회복</strong>.
+                <strong className="text-slate-700">KPI Critical 4 → 1 회복</strong>.
                 이는 플랫폼의 핵심 가치 제안인 '규정 준수 자동화로 인한 심사 준비 공수 절감'을 수치로 증명한 것입니다.
               </p>
             </div>
             <div className="flex gap-6 text-center shrink-0">
               <div>
-                <div className="text-3xl font-bold text-indigo-400">4→1</div>
+                <div className="text-3xl font-bold text-indigo-600">4→1</div>
                 <div className="text-xs text-slate-500 mt-1">KPI Critical</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-violet-400">5건</div>
+                <div className="text-3xl font-bold text-violet-600">5건</div>
                 <div className="text-xs text-slate-500 mt-1">이슈 자동 해소</div>
               </div>
             </div>

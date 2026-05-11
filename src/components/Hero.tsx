@@ -2,31 +2,31 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient grid-bg pt-20">
       {/* Decorative orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-violet-600/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-300/30 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-violet-300/25 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-cyan-200/30 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/30 rounded-full px-4 py-1.5 mb-8 text-sm text-indigo-300">
-          <span className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse" />
+        <div className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-200 rounded-full px-4 py-1.5 mb-8 text-sm text-indigo-700">
+          <span className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse" />
           AI-Driven Process Compliance Platform &nbsp;·&nbsp; PoC 검증 완료
         </div>
 
         {/* Main headline */}
-        <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+        <h1 className="text-5xl md:text-7xl font-bold text-slate-900 leading-tight mb-6">
           <span className="gradient-text">어떤 표준이든,</span>
           <br />
           <span className="gradient-text">어떤 조직이든</span>
         </h1>
-        <p className="text-xl md:text-2xl text-slate-300 mb-4 font-light leading-relaxed">
+        <p className="text-xl md:text-2xl text-slate-700 mb-4 font-light leading-relaxed">
           수립부터 심사까지 — AI가 운영하는
           <br className="hidden md:block" />
           프로세스 컴플라이언스 플랫폼
         </p>
         <p className="text-base md:text-lg text-slate-500 mb-10 max-w-2xl mx-auto">
           ISO · IEC · IATF · ASPICE · CMMI · KS 등 모든 표준을{" "}
-          <strong className="text-slate-400">29개 AI 에이전트</strong>로 자동화.<br />
+          <strong className="text-slate-700">29개 AI 에이전트</strong>로 자동화.<br />
           Plan → Do → Check → Act 전 사이클을 폐쇄 루프로 운영합니다.
         </p>
 
@@ -40,7 +40,7 @@ export default function Hero() {
           </a>
           <a
             href="#features"
-            className="w-full sm:w-auto bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
+            className="w-full sm:w-auto bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-300 text-slate-900 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 shadow-sm"
           >
             기능 살펴보기 →
           </a>
@@ -56,10 +56,10 @@ export default function Hero() {
           ].map((stat) => (
             <div
               key={stat.label}
-              className="bg-white/5 border border-white/10 rounded-2xl px-4 py-5 text-center card-glow"
+              className="bg-white border border-slate-200 rounded-2xl px-4 py-5 text-center card-glow shadow-sm"
             >
               <div className="text-3xl font-bold gradient-text mb-1">{stat.value}</div>
-              <div className="text-sm text-white font-medium mb-1">{stat.label}</div>
+              <div className="text-sm text-slate-900 font-medium mb-1">{stat.label}</div>
               <div className="text-xs text-slate-500">{stat.sub}</div>
             </div>
           ))}
